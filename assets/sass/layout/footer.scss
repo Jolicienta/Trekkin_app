@@ -1,0 +1,53 @@
+// Estilos del footer
+
+footer {
+    color: $White;
+    font-family: $Raleway;
+    background-color: $Raising_black;
+    font-size: 13px;
+    color: $White;
+
+    .foot {
+        height: 120px;
+
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+            display: inline-block;
+            padding-right: 40px;
+
+                a {
+                    text-decoration: none;
+                    color: $White;
+                }
+            }
+        }
+
+        .copyright {
+            text-align: right;
+        }
+
+        /* Estilos versión web */
+        @media (max-width: 767.9px) {
+            ul {
+                display: flex;
+                justify-content: space-between;
+                font-size: 16px;
+                margin-top: 30px;
+
+                li {
+                    padding: 0;
+                }
+            }
+
+            .copyright {
+                text-align: center;
+                font-size: 16px;
+                margin-top: 30px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

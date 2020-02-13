@@ -1,0 +1,76 @@
+// Estilos de sección características
+//y aquellos que tienen en común con la sección precios
+
+.caracteristicas, .precios {
+    text-align: center;
+    margin-bottom: 80px;
+
+    h2, h3 {
+        @include titulo;
+    }
+
+    h2 {
+        margin-top: 25px;
+        margin-bottom: 70px;
+        font-size: 45px;
+
+        @media (min-width: 992px) {
+            font-size: 35px;
+        }
+    }
+
+    h3 {
+        font-size: 28px;
+        margin: 0;
+    }
+
+    .columnas {
+        flex-direction: row;
+
+        .barras {
+            width: 100%;
+
+            @media (max-width: 767.9px) {
+                margin-bottom: 70px;
+            }
+
+            @media (min-width: 992px) {
+                width: 78%;
+            }
+        }
+
+        .animation-element {
+            opacity: 0;
+            /*-moz-transition: all 500ms linear;
+            -webkit-transition: all 500ms linear;
+            -o-transition: all 500ms linear;
+            -ms-transition: all 500ms linear;*/
+            transition: all 500ms linear;
+            /*-moz-transform: translate3d(0px 10px 0px);
+            -webkit-transform: translate3d(0px 10px 0px);
+            -o-transform: translate3d(0px 10px 0px);
+            -ms-transform: translate3d(0px 10px 0px);*/
+            transform: translate3d(0px 10px 0px);
+            transition-delay: 0.7s;
+            position: relative;
+        }
+
+        .animation-element.in-view {
+            opacity: 1;
+            /*-moz-transform: translate3d(0px 0px 0px);
+            -webkit-transform: translate3d(0px 0px 0px);
+            -o-transform: translate3d(0px 0px 0px);
+            -ms-transform: translate3d(0px 0px 0px);*/
+            transform: translate3d(0px 0px 0px);
+        }
+
+        .estadisticas {
+            @include parrafo__movil;
+
+            @media (min-width: 992px) {
+                @include parrafo__web;
+                margin-left: 15px;
+            }
+        }
+    }
+}

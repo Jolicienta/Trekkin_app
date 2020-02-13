@@ -1,0 +1,19 @@
+
+@mixin titulo {
+    font-family: $Raleway;
+    font-weight: $Bold;
+}
+
+@mixin parrafo__web {
+    font-family: $Open_sans;
+    text-align: left;
+    font-size: 13px;
+    line-height: 26px;
+}
+
+@mixin parrafo__movil{
+    font-family: $Open_sans;
+    text-align: left;
+    font-size: 22px;
+    line-height: 36px;
+}
